@@ -1,14 +1,19 @@
 package main
-import "fmt"
+
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
-	secretNumber := 50
+	secretNumber := rand.Intn(10-1) + 1
 	var num int
-	fmt.Println("guess the secret numer")
-	fmt.Scan(&num)
+	fmt.Println("the secret numer between 1 - 10")
+	for num != secretNumber {
+		fmt.Println("try guess it")
+		fmt.Scan(&num)
+	}
 	if num == secretNumber {
-		fmt.Println("hello")
-	} else {
-		fmt.Println("hy")
+		fmt.Println("horray yo exit from the infinite loop")
 	}
 }
