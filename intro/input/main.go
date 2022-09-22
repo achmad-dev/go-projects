@@ -5,11 +5,16 @@ import (
 	"math/rand"
 )
 
+func randomNum() int {
+	return rand.Intn(10-1) + 1
+}
+
 func main() {
-	secretNumber := rand.Intn(10-1) + 1
+	secretNumber := randomNum()
 	var num int
 	fmt.Println("the secret numer between 1 - 10")
 	for num != secretNumber {
+		secretNumber = randomNum()
 		fmt.Println("try guess it")
 		fmt.Scan(&num)
 	}
