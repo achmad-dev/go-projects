@@ -1,8 +1,16 @@
 package main
+
 import "fmt"
 
-const name string = "earth"
+const (
+	name  string = "human"
+	place string = "earth"
+)
+
+var (
+	complete string = name + "in" + place
+)
 
 func main() {
-	fmt.Println(name)
+	fmt.Println(complete)
 }
